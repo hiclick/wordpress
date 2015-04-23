@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Beijing Branch of the PCGroup R&D Center</title>
+    <link rel="stylesheet" href="http://chenzixin.com/static/css/demo/exam.css" />
+
+
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shCore.js"></script>
+
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shBrushAS3.js"></script>
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shBrushJava.js"></script>
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shBrushPython.js"></script>
+    <script type="text/javascript" src="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/scripts/shBrushSql.js"></script>
+
+
+    <link href="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/styles/shCore.css" rel="stylesheet" type="text/css" />
+    <link href="http://www1.pconline.com.cn/api/libs/syntaxhighlighter/3_0_83/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <div id="wrap">
+        <div id="nav" class="clear">太平洋网络·北京研发中心</div>
+
+        <div id="content">
+            <h1>软件开发工程师笔试师之Java部分</h1>
+
+            <div class="tip">时间：<span style="font-size:16px">60</span> min 请将答案写在答题纸上</div>
+
+            <hr>
+
+            <h2>1. Which is true? (Choose all that apply)</h2>
+
+            <ol>
+                <li>"X extends Y" is correct if and only if X is a class and Y is an interface</li>
+                <li>"X extends Y" is correct if and only if X is an interface and Y is a class</li>
+                <li>"X extends Y" is correct if X and Y are either both classes or both interfaces</li>
+                <li>"X extends Y" is correct for all combinations of X and Y being classes and/or interfaces</li>
+            </ol>
+
+            <h2>2. Given:</h2>
+
+            <pre class="brush:java">
+            public class Voop {
+                public static void main(String[] args) {
+                    doStuff(1);
+                    doStuff(1, 2);
+                }
+                // insert code here
+
+            }
+            </pre>
+            <h2>Which, inserted independently at line 6, will compile? (Choose all that apply)</h2>
+            <ol>
+                <li>static void doStuff(int... doArgs) { }</li>
+                <li>static void doStuff(int[] doArgs) { }</li>
+                <li>static void doStuff(int doArgs...) { }</li>
+                <li>static void doStuff(int... doArgs, int y) { }</li>
+                <li>static void doStuff(int x, int... doArgs) { }</li>
+            </ol>
+
+            <H2>3. Given:</H2>
+
+            <pre class="brush:java">
+            class Top {
+              public Top(String s) { System.out.print("B"); }
+            }
+            public class Bottom2 extends Top {
+              public Bottom2(String s) { System.out.print("D"); }
+              public static void main(String[] args) {
+                new Bottom2("C");
+                System.out.println(" ");
+              }
+            }
+            </pre>
+            <h2>What is the result?</h2>
+
+            <ol>
+                <li>BD</li>
+                <li>DB</li>
+                <li>BDC</li>
+                <li>DBC</li>
+                <li>Compilation fails</li>
+            </ol>
+
+            <h2>4. Given:</h2>
+
+            <pre class="brush:java">
+            class Hexy {
+              public static void main(String[] args) {
+                Integer i = 42;
+                String s = (i < 40) ? "life" : (i > 50) ? "universe" : "everything";
+                System.out.println(s);
+              }
+            }
+            </pre>
+            <h2>What is the result?</h2>
+
+            <ol>
+                <li>null</li>
+                <li>life</li>
+                <li>universe</li>
+                <li>everything</li>
+                <li>Compilation fails</li>
+                <li>An exception is thrown at runtime</li>
+            </ol>
+
+            <br>
+
+            <h2>5. Given:</h2>
+
+            <pre class="brush:java">try { int x = Integer.parseInt("two"); }</pre>
+
+            <h2>Which could be used to create an appropriate catch block? (Choose all that apply)</h2>
+
+            <ol>
+                <li>ClassCastException</li>
+                <li>IllegalStateException</li>
+                <li>NumberFormatException</li>
+                <li>IllegalArgumentException</li>
+                <li>ExceptionInInitializerError</li>
+                <li>ArrayIndexOutOfBoundsException</li>
+            </ol>
+
+            <h2>6. Given:</h2>
+
+            <pre class="brush:java">
+            import java.util.regex.*;
+
+            public class Archie {
+                public static void main(String[] args) {
+                    Pattern p = Pattern.compile("\\d+");
+                    Matcher m = p.matcher("ab2c4d67");
+                    int count = 0;
+                    while(m.find())
+                        count++;
+                    System.out.print(count);
+                }
+            }
+            </pre>
+
+            <h2>What is the result?</h2>
+
+            <ol>
+                <li>0</li>
+                <li>3</li>
+                <li>4</li>
+                <li>8</li>
+                <li>9</li>
+                <li>Compilation fails</li>
+            </ol>
+
+            <h2>7. Which collection class(es) allows you to grow or shrink its size and provides indexed access to its elements, but whose methods are not synchronized? (Choose all that apply)</h2>
+
+            <ol>
+                <li>java.util.HashSet</li>
+                <li>java.util.LinkedHashSet</li>
+                <li>java.util.List</li>
+                <li>java.util.ArrayList</li>
+                <li>java.util.Vector</li>
+                <li>java.util.PriorityQueue</li>
+            </ol>
+
+            <h2>8. Given:</h2>
+
+            <pre class="brush:java">
+            class X { void do1() { } }
+            class Y extends X { void do2() { } }
+
+            class Chrome {
+              public static void main(String[] args) {
+                X x1 = new X();
+                X x2 = new Y();
+                Y y1 = new Y();
+                // insert code here
+              }
+            }
+            </pre>
+
+            <h2>Which, inserted at line 9, will compile? (Choose all that apply)</h2>
+
+            <ol>
+                <li>x2.do2();</li>
+                <li>(Y)x2.do2();</li>
+                <li>((Y)x2).do2();</li>
+                <li>None of the above statements will compile</li>
+            </ol>
+
+            <h2>9. 在JSP中，page指令的（ ）属性用来引入需要的包或类？</h2>
+
+            <ol>
+                <li>extends</li>
+                <li>import</li>
+                <li>language</li>
+                <li>contentType</li>
+            </ol>
+
+            <h2>10. 在JSP中，（ ）指令用于将文件嵌入JSP页面？</h2>
+
+            <ol>
+                <li>page</li>
+                <li>forward</li>
+                <li>include</li>
+                <li>taglib</li>
+            </ol>
+
+
+            <h2>11. 在J2EE中，以下不是JSP隐式对象的是（ ）？</h2>
+
+            <ol>
+                <li>pageContext</li>
+                <li>context</li>
+                <li>application</li>
+                <li>out</li>
+            </ol>
+
+
+            <h2>12. 在J2EE中，下列（ ）语句可以获取页面请求中一个文本框的输入（文本框的名称为title）？</h2>
+
+            <ol>
+                <li>request.getParameter("title");</li>
+                <li>request.getAttribute("title");</li>
+                <li>request.getParameterValues("title");</li>
+                <li>request.getParameters("title");</li>
+            </ol>
+
+            <h2>13. Given a Servlet snippet：</h2>
+
+            <pre class="brush:java">
+            request.getSession().getAttribute("A");
+            </pre>
+
+            <h2>假定第二行返回的对象引用不是null，那么这个对象存储在（ ）范围中？</h2>
+
+            <ol>
+                <li>page</li>
+                <li>session</li>
+                <li>request</li>
+                <li>application</li>
+            </ol>
+
+            <h2>14. J2EE中，JSP表达式语言的语法是（ ）？</h2>
+
+            <ol>
+                <li>{EL expression}</li>
+                <li>${EL expression}</li>
+                <li>@{EL expression}</li>
+                <li>&{EL expression}</li>
+            </ol>
+
+            <h2>15. J2EE中，JSP EL表达式：${user.loginName}的执行效果等同于（ ）？</h2>
+
+            <ol>
+                <li><%= user.getLoginName() %></li>
+                <li><% user.getLoginName(); %></li>
+                <li><%= user.loginName %></li>
+                <li><% user.loginName; %></li>
+            </ol>
+
+            <h2>16. 在J2EE中，若要在JSP正确使用标签：&lt;x:getKing/>，在 JSP 中声明的taglib指令为：</h2>
+
+            <pre class="brush:java">
+            <%@ taglib uri="/WEB-INF/myTags.tld" prefix="____" %>
+            </pre>
+
+            <h2>下划线应是（ ）？</h2>
+
+            <ol>
+                <li>x</li>
+                <li>getKing</li>
+                <li>myTags</li>
+                <li>king</li>
+            </ol>
+
+
+            <h2>17. forward和redirect的区别是？</h2>
+
+            <br>
+
+            <h2>18. JSP中page、request、session、application四种作用范围的区别是什么？</h2>
+
+            <br>
+
+            <h2>19. How to specify the max size for memory allocation pool to 800m with sun jvm?</h2>
+
+            <br>
+
+            <h2>20. 在SQL语言中，删除一张表里所有数据的最简单和最有效的命令是（ ）？</h2>
+
+            <ol>
+                <li>DESTROY TABLE</li>
+                <li>TRUNCATE TABLE</li>
+                <li>DELETE TABLE</li>
+                <li>REMOVE TABLE</li>
+            </ol>
+
+            <h2>21. 在SQL语言中事务结束的命令是（ ）？</h2>
+
+            <ol>
+                <li>END TRANSACTION</li>
+                <li>COMMIT</li>
+                <li>ROLLBACK</li>
+                <li>COMMIT 或 ROLLBACK</li>
+            </ol>
+
+            <h2>22. 对事务回滚的正确描述是（ ）？</h2>
+
+            <ol>
+                <li>将该事务对数据库的修改进行恢复</li>
+                <li>将事务对数据库的更新写入硬盘</li>
+                <li>跳转到事务程序的开头重新执行</li>
+                <li>将事务中修改的变量值恢复到事务开始时的初值</li>
+            </ol>
+
+
+            <h2>23. 数据库题：有一个表，表名叫student, 有3个字段name、age、address，没有主键，假定有很多重复记录（3个字段的数据完全重复），如何使用SQL语句，只保存重复记录中的1条，而删除其它重复记录？</h2>
+
+
+            <br>
+            <h2>24. 请问下面的JavaScript代码中两个变量有何不同？</h2>
+
+            <pre class="brush:html">
+            <script type="text/javascript">
+                a = 0;
+                var b = 0;
+            </script>
+            </pre>
+
+            <br>
+
+            <h2>25. 根据HTML代码片段：</h2>
+
+            <pre class="brush:html">
+            <div class="box">
+                <form action="" method="post" id="sign-up">
+                    <input type="text" name="name" value="" />
+                    <select name="color">
+                        <option value="red">Red</option>
+                        <option value="green">Green</option>
+                        <option value="blue">Blue</option>
+                    </select>
+                    <input type="submit" name="" value="Submit" />
+                </form>
+            </div>
+            </pre>
+
+            <h2>请先画出在浏览器中预览的效果，并编写代码，实现以下功能：</h2>
+
+            <blockquote>点击Submit按钮，在文本框中显示select选中的值</blockquote>
+
+            <h3>注：可使用jQuery框架</h3>
+
+
+        </div>
+        <div id="footer">为用户提供最高效的平台 为客户提供最优质的服务 为员工提供最广阔的空间 为公司创造最大化的效益</div>
+    </div>
+
+    <script type="text/javascript">
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.all()
+    </script>
+</body>
+</html>
