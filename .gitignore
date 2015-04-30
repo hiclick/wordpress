@@ -1,4 +1,6 @@
 .idea/*
 
+wp-config.php
+
 Thumbs.db
 .DS_Store
