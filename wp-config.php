@@ -21,7 +21,7 @@ define('DB_NAME', 'qdm11494899_db');
 define('DB_USER', 'qdm11494899');
 
 /** MySQL数据库密码 */
-define('DB_PASSWORD', 'my2014sql');
+define('DB_PASSWORD', 'PSD');
 
 /** MySQL主机 */
 define('DB_HOST', 'qdm11494899.my3w.com');
